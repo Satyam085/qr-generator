@@ -1,5 +1,5 @@
-import  { useState } from "react"
-import QRCode from "qrcode" // You'll need to install this library
+import { useState } from "react"
+import QRCode from "qrcode"
 
 function App() {
   const [inputValue, setInputValue] = useState("")
@@ -15,9 +15,9 @@ function App() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-900">
-      <main className="bg-white p-8 rounded-lg shadow-lg">
-        <div className="text-center font-bold text-lg mb-4">
+    <div className="flex justify-center items-center h-screen bg-gray-800">
+      <main className="bg-slate-400 p-8 rounded-lg shadow-lg">
+        <div className="py-6 text-center font-extrabold text-7xl mb-4 text-gray-900">
           QR Code Generator
         </div>
         <div className="mb-4 flex items-center">
@@ -28,19 +28,19 @@ function App() {
             className="border border-gray-400 rounded-md py-2 px-4 focus:outline-none focus:border-blue-500 flex-1"
           />
           <button
-            type="button"
+            type="submit"
             onClick={generateQRCode}
             className="ml-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline"
           >
             Generate
           </button>
         </div>
-        <div className="text-center">
+        <div className="text-center ">
           {qrCode && (
             <img
               src={qrCode}
               alt="Generated QR Code"
-              className="mt-4 mx-auto"
+              className="mt-10 mx-auto w-48 h-48"
             />
           )}
         </div>
